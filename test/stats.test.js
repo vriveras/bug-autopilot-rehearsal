@@ -43,6 +43,14 @@ describe('median', () => {
     assert.strictEqual(median([10, 20, 30, 40, 50]), 30);
   });
 
+  it('averages the two middle elements for even-length array', () => {
+    assert.strictEqual(median([1, 2, 3, 4]), 2.5);
+  });
+
+  it('averages the two middle elements for length-2 array', () => {
+    assert.strictEqual(median([1, 2]), 1.5);
+  });
+
   it('throws on empty array', () => {
     assert.throws(() => median([]), { message: /at least one value/ });
   });
