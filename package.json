@@ -1,0 +1,13 @@
+{
+  "name": "bug-autopilot-demo",
+  "version": "1.0.0",
+  "description": "A small stats library with a seeded median bug for autopilot demos",
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  }
+}
