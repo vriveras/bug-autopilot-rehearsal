@@ -1,0 +1,24 @@
+{
+  "iteration": 1,
+  "counts": { "blocker": 0, "warn": 0, "info": 2 },
+  "findings": [
+    {
+      "id": "maintainability-1-1",
+      "severity": "INFO",
+      "file": "test/stats.test.js",
+      "line": "46-67",
+      "summary": "Regression tests duplicate assertions already added to the median describe block.",
+      "suggested_fix": "Consolidate the duplicated median([1,2,3,4]) === 2.5 / median([4,1,3,2]) === 2.5 assertions into a single block, and add a genuinely distinct case (e.g. even-length with negatives like median([-2,0,2,4]) === 1).",
+      "source_angles": ["maintainability"]
+    },
+    {
+      "id": "maintainability-1-2",
+      "severity": "INFO",
+      "file": "src/stats.js",
+      "line": "24-28",
+      "summary": "JSDoc for median() doesn't document even/odd averaging behavior.",
+      "suggested_fix": "Expand the JSDoc, e.g. @returns {number} the middle value for odd-length input, or the average of the two central values for even-length input.",
+      "source_angles": ["maintainability"]
+    }
+  ]
+}
