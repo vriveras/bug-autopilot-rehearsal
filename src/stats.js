@@ -22,9 +22,11 @@ export function mean(nums) {
 }
 
 /**
- * Returns the median of an array of numbers.
+ * Returns the median of an array of numbers. For odd-length input this is the
+ * middle value; for even-length input it is the average of the two central
+ * values (and may be fractional).
  * @param {number[]} nums
- * @returns {number}
+ * @returns {number} the middle value for odd-length input, or the average of the two central values for even-length input
  */
 export function median(nums) {
   if (nums.length === 0) throw new Error('median requires at least one value');

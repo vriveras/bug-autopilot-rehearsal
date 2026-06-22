@@ -43,14 +43,6 @@ describe('median', () => {
     assert.strictEqual(median([10, 20, 30, 40, 50]), 30);
   });
 
-  it('averages the two middle elements for even-length array', () => {
-    assert.strictEqual(median([1, 2, 3, 4]), 2.5);
-  });
-
-  it('handles unsorted even-length array', () => {
-    assert.strictEqual(median([4, 1, 3, 2]), 2.5);
-  });
-
   it('throws on empty array', () => {
     assert.throws(() => median([]), { message: /at least one value/ });
   });
@@ -63,5 +55,9 @@ describe('median even-length regression', () => {
 
   it('averages the two middle elements for an unsorted even-length array (regression: even-length median bug)', () => {
     assert.strictEqual(median([4, 1, 3, 2]), 2.5);
+  });
+
+  it('averages two central values for even-length input with negatives (regression: even-length median bug)', () => {
+    assert.strictEqual(median([-2, 0, 2, 4]), 1);
   });
 });
