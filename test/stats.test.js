@@ -54,4 +54,12 @@ describe('median', () => {
   it('handles unsorted even-length array', () => {
     assert.strictEqual(median([4, 1, 3, 2]), 2.5);
   });
+
+  // Regression: median() previously returned the upper middle element for
+  // even-length arrays instead of averaging the two middle elements.
+  it('averages the two middle elements for even-length arrays — regression', () => {
+    assert.strictEqual(median([1, 2, 3, 4]), 2.5);
+    assert.strictEqual(median([1, 2]), 1.5);
+    assert.strictEqual(median([3, 1, 2]), 2);
+  });
 });
