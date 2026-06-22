@@ -1,0 +1,3 @@
+REPRODUCED
+File: test/bug-repro.test.js
+Command: node --test test\bug-repro.test.js
