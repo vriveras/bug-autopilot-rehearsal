@@ -1,0 +1,3 @@
+CONVERGED
+Iteration 1 — rule R1
+BLOCKER=0 WARN=0 INFO=2
