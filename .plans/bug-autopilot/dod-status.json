@@ -1,0 +1,7 @@
+{
+  "DoD-1": {
+    "verified": true,
+    "lastChecked": "2026-06-22T22:59:30.805Z",
+    "evidence": "median() now averages the two middle elements for even-length arrays. `node bin/stats.js 1 2 3 4` prints median: 2.5. All 14 tests pass (npm test, 0 failures), including new even-length regression tests."
+  }
+}
