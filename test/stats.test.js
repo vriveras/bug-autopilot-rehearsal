@@ -55,3 +55,13 @@ describe('median', () => {
     assert.throws(() => median([]), { message: /at least one value/ });
   });
 });
+
+describe('median even-length regression', () => {
+  it('averages the two middle elements instead of returning the lower-middle one (regression: even-length median bug)', () => {
+    assert.strictEqual(median([1, 2, 3, 4]), 2.5);
+  });
+
+  it('averages the two middle elements for an unsorted even-length array (regression: even-length median bug)', () => {
+    assert.strictEqual(median([4, 1, 3, 2]), 2.5);
+  });
+});
